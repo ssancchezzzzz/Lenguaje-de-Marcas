@@ -340,3 +340,59 @@ visibility:hidden;
 position:absolute;
 
 }
+
+/* 
+Clase usada por el buscador para ocultar tarjetas.
+
+IMPORTANTE:
+No se usa display:none porque el grid recalcula
+las columnas y hace que las tarjetas visibles
+ocupen todo el ancho.
+
+Con visibility:hidden evitamos que se muestren
+pero mantenemos el espacio del grid.
+*/
+
+.oculta{
+
+visibility:hidden;
+
+position:absolute;
+
+}
+
+
+/* 
+Estilos para el botón RESET
+Se aplica al elemento HTML:
+<button id="boton_reset">
+*/
+
+#boton_reset{
+
+padding:8px 18px;
+
+border:1px solid white;
+
+background:transparent;
+
+color:white;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+
+/* 
+Efecto hover del botón RESET
+*/
+
+#boton_reset:hover{
+
+background:white;
+
+color:black;
+
+}

@@ -95,41 +95,100 @@ function crear_tarjeta(titulo,texto,imagen){
 /*
 FUNCIÓN: activar_busqueda()
 
-Activa el sistema de búsqueda de tarjetas por título.
-
-1. El usuario escribe una temporada.
-2. Se recorren todas las tarjetas.
-3. Si el título contiene el texto buscado se muestra.
-4. Si no coincide se oculta.
+Las tarjetas se obtienen dentro del listener porque
+se crean dinámicamente desde el XML.
 */
 
 function activar_busqueda(){
 
+let campo=document.getElementById("campo_busqueda");
+
+
+/*
+LISTENER DE BÚSQUEDA AUTOMÁTICA
+
+Se ejecuta cada vez que el usuario escribe en el input.
+*/
+
+campo.addEventListener("input",function(){
+
+let texto=campo.value.toLowerCase();
+
+/* 
+Se seleccionan las tarjetas en ese momento,
+así siempre detecta las que vienen del XML
+o las que el usuario haya creado.
+*/
+
+let tarjetas=document.querySelectorAll(".tarjeta");
+
+tarjetas.forEach(t=>{
+
+let titulo=t.querySelector("h3").textContent.toLowerCase();
+
+if(titulo.includes(texto)){
+
+t.classList.remove("oculta");
+
+}else{
+
+t.classList.add("oculta");
+
+}
+
+});
+
+});
+
+
+/*
+LISTENER DEL BOTÓN BUSCAR
+Búsqueda automática.
+*/
+
 document.getElementById("boton_buscar").addEventListener("click",function(){
 
-    // Texto introducido por el usuario
-    let texto=document.getElementById("campo_busqueda").value.toLowerCase();
+let texto=campo.value.toLowerCase();
 
-    // Selecciona todas las tarjetas existentes
-    let tarjetas=document.querySelectorAll(".tarjeta");
+let tarjetas=document.querySelectorAll(".tarjeta");
 
-    tarjetas.forEach(t=>{
+tarjetas.forEach(t=>{
 
-        let titulo=t.querySelector("h3").textContent.toLowerCase();
+let titulo=t.querySelector("h3").textContent.toLowerCase();
 
-        if(titulo.includes(texto)){
+if(titulo.includes(texto)){
 
-            // Si coincide se elimina la clase oculta
-            t.classList.remove("oculta");
+t.classList.remove("oculta");
 
-        }else{
+}else{
 
-            // Si no coincide se añade la clase oculta
-            t.classList.add("oculta");
+t.classList.add("oculta");
 
-        }
+}
 
-    });
+});
+
+});
+
+
+/*
+LISTENER BOTÓN RESET
+
+Limpia el campo de búsqueda
+Muestra todas las tarjetas
+*/
+
+document.getElementById("boton_reset").addEventListener("click",function(){
+
+campo.value="";
+
+let tarjetas=document.querySelectorAll(".tarjeta");
+
+tarjetas.forEach(t=>{
+
+t.classList.remove("oculta");
+
+});
 
 });
 
