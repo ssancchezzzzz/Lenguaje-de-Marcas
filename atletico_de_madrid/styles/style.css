@@ -1,3 +1,8 @@
+/* 
+Se aplica a TODOS los elementos del HTML.
+Elimina márgenes por defecto y define fuente global.
+*/
+
 *{
 margin:0;
 padding:0;
@@ -5,12 +10,24 @@ box-sizing:border-box;
 font-family:'Orbitron',sans-serif;
 }
 
+
+/* 
+Estilos aplicados al <body>
+Define el fondo general de la página
+*/
+
 body{
 
 background:linear-gradient(145deg,#050505,#111);
 color:white;
 
 }
+
+
+/* 
+Estilos para el body cuando se usa la página de inicio
+<body class="pagina_inicio">
+*/
 
 .pagina_inicio{
 
@@ -22,12 +39,23 @@ height:100vh;
 }
 
 
+/* 
+Estilos para el título principal de la página inicial
+<h1 class="titulo_inicio">
+*/
+
 .titulo_inicio{
 
 font-size:70px;
 letter-spacing:6px;
 
 }
+
+
+/* 
+Estilos para el subtítulo dentro del título
+<h1> <span>
+*/
 
 .titulo_inicio span{
 
@@ -36,6 +64,12 @@ font-size:18px;
 opacity:0.7;
 
 }
+
+
+/* 
+Estilos para el botón de entrar
+<button id="boton_entrar">
+*/
 
 #boton_entrar{
 
@@ -54,6 +88,11 @@ transition:0.4s;
 
 }
 
+
+/* 
+Efecto hover del botón de entrar
+*/
+
 #boton_entrar:hover{
 
 background:white;
@@ -62,6 +101,12 @@ color:black;
 transform:translateY(-6px);
 
 }
+
+
+/* 
+Contenedor principal de la página
+<div class="contenedor_principal">
+*/
 
 .contenedor_principal{
 
@@ -77,6 +122,12 @@ grid-template-rows:100px auto 80px;
 height:100vh;
 
 }
+
+
+/* 
+Estilos del header
+<header class="cabecera">
+*/
 
 .cabecera{
 
@@ -94,6 +145,12 @@ backdrop-filter:blur(10px);
 
 }
 
+
+/* 
+Estilos del contenedor de tarjetas
+<main id="galeria_tarjetas">
+*/
+
 main{
 
 grid-area:main;
@@ -107,6 +164,12 @@ gap:40px;
 padding:50px;
 
 }
+
+
+/* 
+Estilos de cada tarjeta
+<div class="tarjeta">
+*/
 
 .tarjeta{
 
@@ -130,6 +193,11 @@ animation:aparecerTarjeta 0.8s ease;
 
 }
 
+
+/* 
+Efecto hover de la tarjeta
+*/
+
 .tarjeta:hover{
 
 transform:translateY(-10px) scale(1.03);
@@ -137,6 +205,11 @@ transform:translateY(-10px) scale(1.03);
 box-shadow:0 20px 50px rgba(0,0,0,0.8);
 
 }
+
+
+/* 
+Imagen dentro de la tarjeta
+*/
 
 .tarjeta img{
 
@@ -148,17 +221,34 @@ transition:transform 0.6s;
 
 }
 
+
+/* 
+Animación de zoom en imagen al pasar el ratón
+*/
+
 .tarjeta:hover img{
 
 transform:scale(1.15);
 
 }
 
+
+/* 
+Título de la tarjeta
+<h3>
+*/
+
 .tarjeta h3{
 
 padding:15px;
 
 }
+
+
+/* 
+Texto descriptivo de la tarjeta
+<p>
+*/
 
 .tarjeta p{
 
@@ -169,6 +259,12 @@ font-size:14px;
 opacity:0.8;
 
 }
+
+
+/* 
+Footer de la página
+<footer class="pie">
+*/
 
 .pie{
 
@@ -181,6 +277,12 @@ align-items:center;
 background:rgba(0,0,0,0.6);
 
 }
+
+
+/* 
+Estilos base de los modales
+<div class="modal">
+*/
 
 .modal{
 
@@ -201,6 +303,12 @@ align-items:center;
 
 }
 
+
+/* 
+Contenido interno del modal
+<div class="contenido_modal">
+*/
+
 .contenido_modal{
 
 background:#111;
@@ -216,16 +324,19 @@ gap:10px;
 
 }
 
-@keyframes aparecerTarjeta{
 
-0%{
-opacity:0;
-transform:translateY(40px);
-}
+/* 
+Clase añadida por el buscador cuando una tarjeta
+no coincide con la búsqueda.
 
-100%{
-opacity:1;
-transform:translateY(0);
-}
+IMPORTANTE
+No usamos display:none para evitar que el grid
+recalcule el tamaño de las tarjetas visibles.
+*/
+
+.oculta{
+
+visibility:hidden;
+position:absolute;
 
 }
