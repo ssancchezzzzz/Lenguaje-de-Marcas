@@ -1,0 +1,398 @@
+/* 
+Se aplica a TODOS los elementos del HTML.
+Elimina márgenes por defecto y define fuente global.
+*/
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+}
+
+
+/* 
+Estilos aplicados al <body>
+Define el fondo general de la página
+*/
+
+body{
+
+background:linear-gradient(145deg,#050505,#111);
+color:white;
+
+}
+
+
+/* 
+Estilos para el body cuando se usa la página de inicio
+<body class="pagina_inicio">
+*/
+
+.pagina_inicio{
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+}
+
+
+/* 
+Estilos para el título principal de la página inicial
+<h1 class="titulo_inicio">
+*/
+
+.titulo_inicio{
+
+font-size:70px;
+letter-spacing:6px;
+
+}
+
+
+/* 
+Estilos para el subtítulo dentro del título
+<h1> <span>
+*/
+
+.titulo_inicio span{
+
+display:block;
+font-size:18px;
+opacity:0.7;
+
+}
+
+
+/* 
+Estilos para el botón de entrar
+<button id="boton_entrar">
+*/
+
+#boton_entrar{
+
+margin-top:40px;
+padding:20px 60px;
+
+background:transparent;
+
+border:1px solid white;
+
+color:white;
+
+cursor:pointer;
+
+transition:0.4s;
+
+}
+
+
+/* 
+Efecto hover del botón de entrar
+*/
+
+#boton_entrar:hover{
+
+background:white;
+color:black;
+
+transform:translateY(-6px);
+
+}
+
+
+/* 
+Contenedor principal de la página
+<div class="contenedor_principal">
+*/
+
+.contenedor_principal{
+
+display:grid;
+
+grid-template-areas:
+"cabecera"
+"main"
+"pie";
+
+grid-template-rows:100px auto 80px;
+
+height:100vh;
+
+}
+
+
+/* 
+Estilos del header
+<header class="cabecera">
+*/
+
+.cabecera{
+
+grid-area:cabecera;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-around;
+
+background:rgba(0,0,0,0.5);
+
+backdrop-filter:blur(10px);
+
+}
+
+
+/* 
+Estilos del contenedor de tarjetas
+<main id="galeria_tarjetas">
+*/
+
+main{
+
+grid-area:main;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:40px;
+
+padding:50px;
+
+}
+
+
+/* 
+Estilos de cada tarjeta
+<div class="tarjeta">
+*/
+
+.tarjeta{
+
+background:rgba(255,255,255,0.05);
+
+border-radius:15px;
+
+overflow:hidden;
+
+display:flex;
+
+flex-direction:column;
+
+backdrop-filter:blur(8px);
+
+border:1px solid rgba(255,255,255,0.1);
+
+transition:0.4s;
+
+animation:aparecerTarjeta 0.8s ease;
+
+}
+
+
+/* 
+Efecto hover de la tarjeta
+*/
+
+.tarjeta:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+box-shadow:0 20px 50px rgba(0,0,0,0.8);
+
+}
+
+
+/* 
+Imagen dentro de la tarjeta
+*/
+
+.tarjeta img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+
+transition:transform 0.6s;
+
+}
+
+
+/* 
+Animación de zoom en imagen al pasar el ratón
+*/
+
+.tarjeta:hover img{
+
+transform:scale(1.15);
+
+}
+
+
+/* 
+Título de la tarjeta
+<h3>
+*/
+
+.tarjeta h3{
+
+padding:15px;
+
+}
+
+
+/* 
+Texto descriptivo de la tarjeta
+<p>
+*/
+
+.tarjeta p{
+
+padding:0 15px 20px;
+
+font-size:14px;
+
+opacity:0.8;
+
+}
+
+
+/* 
+Footer de la página
+<footer class="pie">
+*/
+
+.pie{
+
+grid-area:pie;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:rgba(0,0,0,0.6);
+
+}
+
+
+/* 
+Estilos base de los modales
+<div class="modal">
+*/
+
+.modal{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.85);
+
+justify-content:center;
+align-items:center;
+
+}
+
+
+/* 
+Contenido interno del modal
+<div class="contenido_modal">
+*/
+
+.contenido_modal{
+
+background:#111;
+
+padding:40px;
+
+border-radius:10px;
+
+display:flex;
+flex-direction:column;
+
+gap:10px;
+
+}
+
+
+/* 
+Clase añadida por el buscador cuando una tarjeta
+no coincide con la búsqueda.
+
+IMPORTANTE
+No usamos display:none para evitar que el grid
+recalcule el tamaño de las tarjetas visibles.
+*/
+
+.oculta{
+
+visibility:hidden;
+position:absolute;
+
+}
+
+/* 
+Clase usada por el buscador para ocultar tarjetas.
+
+IMPORTANTE:
+No se usa display:none porque el grid recalcula
+las columnas y hace que las tarjetas visibles
+ocupen todo el ancho.
+
+Con visibility:hidden evitamos que se muestren
+pero mantenemos el espacio del grid.
+*/
+
+.oculta{
+
+visibility:hidden;
+
+position:absolute;
+
+}
+
+
+/* 
+Estilos para el botón RESET
+Se aplica al elemento HTML:
+<button id="boton_reset">
+*/
+
+#boton_reset{
+
+padding:8px 18px;
+
+border:1px solid white;
+
+background:transparent;
+
+color:white;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+
+/* 
+Efecto hover del botón RESET
+*/
+
+#boton_reset:hover{
+
+background:white;
+
+color:black;
+
+}
