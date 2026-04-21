@@ -1,0 +1,14 @@
+<products>
+    <product>
+        <name>Camiseta Beige</name>
+        <price>25</price>
+        <image>img/camiseta.png</image>
+    </product>
+
+<product>
+    <name>Sudadera Marrón</name>
+    <price>50</price>
+    <image>img/sudadera.png</image>
+</product>
+
+</products>
