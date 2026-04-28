@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Galería de Champions del Atlético de Madrid</title>
+
+<link rel="stylesheet" href="styles/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="contenedor_principal">
+
+<header class="cabecera">
+
+<h1>Atlético en Champions</h1>
+
+<input id="campo_busqueda" type="text" placeholder="Buscar temporada...">
+
+<button id="boton_buscar">Buscar</button>
+
+<button id="boton_reset">Reset</button>
+
+<select id="selector_tema">
+
+<option value="oscuro">Modo oscuro</option>
+<option value="claro">Modo claro</option>
+<option value="personalizado">Modo personalizado</option>
+
+</select>
+
+<button id="boton_tarjeta">Añadir tarjeta</button>
+
+</header>
+
+
+<main id="galeria_tarjetas">
+
+</main>
+
+
+<footer class="pie">
+
+<p>Historia del Atlético de Madrid en Champions durante la era Simeone</p>
+
+</footer>
+
+</div>
+
+<div id="modal_tema" class="modal">
+
+<div class="contenido_modal">
+
+<h2>Personalizar colores</h2>
+
+<label>Cabecera</label>
+<input type="color" id="color_cabecera">
+
+<label>Fondo</label>
+<input type="color" id="color_main">
+
+<label>Footer</label>
+<input type="color" id="color_pie">
+
+<button id="aplicar_tema">Aplicar</button>
+
+</div>
+
+</div>
+
+<div id="modal_tarjeta" class="modal">
+
+<div class="contenido_modal">
+
+<h2>Nueva tarjeta</h2>
+
+<input id="titulo_tarjeta" type="text" placeholder="Título">
+
+<textarea id="descripcion_tarjeta"></textarea>
+
+<input id="imagen_tarjeta" type="file">
+
+<button id="crear_tarjeta">Crear tarjeta</button>
+
+</div>
+
+</div>
+
+<script src="scripts/script.js"></script>
+
+</body>
+</html>

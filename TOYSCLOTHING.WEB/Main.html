@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda - ToysClothing</title>
+    <link rel="stylesheet" href="styles/Toysclothing.css">
+</head>
+<body class="light">
+
+<header>
+    <div class="menu-icon">☰</div>
+
+<input type="text" id="search" placeholder="Buscar...">
+
+<button id="themeToggle">🌙</button>
+
+</header>
+
+<div id="sideMenu" class="side-menu">
+
+    <span id="closeMenu" class="close-btn">&times;</span>
+
+    <a href="#">Sudaderas</a>
+    <a href="#">Pantalones</a>
+    <a href="#">Camisetas</a>
+    <a href="#">Eventos</a>
+    <a href="#">PopUp</a>
+
+</div>
+
+<section class="hero">
+    <img src="img/modelo1.png">
+    <img src="img/modelo2.png">
+    <video src="img/video.mp4" controls></video>
+</section>
+
+<section id="products" class="products"></section>
+
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <span id="closeModal">&times;</span>
+
+        <img id="modalImg" width="100%">
+
+        <h2 id="modalTitle"></h2>
+        <p id="modalPrice"></p>
+
+        <select id="size">
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+        </select>
+
+        <div id="colorOptions" class="colors">
+            <div class="color active" data-color="Blanco" style="background:#ffffff;"></div>
+            <div class="color" data-color="Negro" style="background:#000000;"></div>
+            <div class="color" data-color="Gris" style="background:#808080;"></div>
+            <div class="color" data-color="Azul cielo" style="background:#87CEEB;"></div>
+            <div class="color" data-color="Azul marino" style="background:#1B3A57;"></div>
+        </div>
+
+        <input id="address" placeholder="Dirección de envío">
+
+        <button id="buyBtn">Comprar</button>
+    </div>
+</div>
+
+
+</div>
+
+<footer>
+    <p>Trabaja con nosotros, contactanos por correo o por whatsapp</p>
+    <p>Contacto: ToysClothing@gmail.com</p>
+    <p>Teléfono: 656 676 686</p>
+</footer>
+
+<script src="scripts/Toysclothing.js"></script>
+
+</body>
+</html>

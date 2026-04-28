@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<galeria>
+
+<tarjeta>
+
+<titulo>Octavos de final 2026</titulo>
+
+<texto>
+El equipo neutralizó al tottenham imponiendo su juego y rematando el resultado con un 5-2.
+</texto>
+
+<imagen>imagenes/atletitotten.jpg</imagen>
+
+</tarjeta>
+
+<tarjeta>
+
+<titulo>Atleti vs Brujas 2026</titulo>
+
+<texto>
+El equipo eliminó al Brujas en una de las eliminatorias más locas imponiéndose por 4-1.
+</texto>
+
+<imagen>imagenes/brujas.jpg</imagen>
+
+</tarjeta>
+
+<tarjeta>
+
+<titulo>Antoine Griezmann 2026</titulo>
+
+<texto>
+Máximo goleador del Atlético de Madrid en Champions con 40 dianas.
+</texto>
+
+<imagen>imagenes/maxgol.jpg</imagen>
+
+</tarjeta>
+
+<tarjeta>
+
+<titulo>Anfield 2020</titulo>
+
+<texto>
+El Atlético eliminó al Liverpool en una de las grandes noches europeas.
+</texto>
+
+<imagen>imagenes/anfield2020.jpg</imagen>
+
+</tarjeta>
+
+<tarjeta>
+
+<titulo>Juventus 2019</titulo>
+
+<texto>
+El Metropolitano vivió una noche mágica con un 2-0 histórico.
+</texto>
+
+<imagen>imagenes/juventus2019.jpg</imagen>
+
+</tarjeta>
+
+<tarjeta>
+
+<titulo>Final Milán 2016</titulo>
+
+<texto>
+El Atlético volvió a disputar una final europea.
+</texto>
+
+<imagen>imagenes/milan2016.jpg</imagen>
+
+</tarjeta>
+
+<tarjeta>
+
+<titulo>Semifinal Bayern 2016</titulo>
+
+<texto>
+El equipo eliminó al Bayern en una de las eliminatorias más tácticas.
+</texto>
+
+<imagen>imagenes/bayern2016.jpg</imagen>
+
+</tarjeta>
+
+<tarjeta>
+
+<titulo>Final Lisboa 2014</titulo>
+
+<texto>
+El Atlético estuvo a segundos de ganar su primera Champions.
+</texto>
+
+<imagen>imagenes/lisboa2014.jpg</imagen>
+
+</tarjeta>
+
+</galeria>
