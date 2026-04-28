@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap');
+
+/* --- ESTILOS GENERALES --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #111;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}
+
+
+/* --- BOTONES --- */
+
+button,
+input[type="submit"],
+#botonEnviar,
+#btnCargar {
+    background: #000;
+    color: #fff;
+    padding: 14px 40px;
+    border: 1px solid #000;
+    margin: 10px;
+    letter-spacing: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+button:hover,
+input[type="submit"]:hover,
+#btnCargar:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* --- CONTENEDORES GENERALES (Catálogo y Registro) --- */
+
+
+/* 
+   Quitamos display:none aquí porque estaba ocultando
+   también el formulario de registro.
+*/
+
+#controles,
+#registroUsuario,
+#panel-controles {
+    margin: 40px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+    border: 1px solid #000;
+    background: #fafafa;
+    border-radius: 4px;
+}
+
+
+/* El registro debe verse siempre */
+
+#registroUsuario {
+    display: block !important;
+    max-width: 600px;
+}
+
+
+/* Contador del catálogo */
+
+#controles p#contador {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* --- FORMULARIOS --- */
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
+    text-align: left;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    padding: 12px 16px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #000;
+    font-size: 14px;
+    margin: 10px;
+    background: #fff;
+    letter-spacing: 1px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+    background: #f0f0f0;
+    border-left: 5px solid #000;
+}
+
+
+/* --- GRID DE ARMAS (CATÁLOGO) --- */
+
+#contenedor-armas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* Evita que el HR insertado en el JS rompa el grid */
+
+#contenedor-armas>hr {
+    display: none;
+}
+
+.arma {
+    border: 1px solid #111;
+    padding: 25px;
+    background: #ffffff;
+    transition: 0.3s ease;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.arma:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.arma img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin: 15px 0;
+    background: #f9f9f9;
+    padding: 10px;
+}
+
+.arma p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.arma strong {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* --- DIALOG / MODAL --- */
+
+dialog {
+    padding: 30px;
+    border: 2px solid #000;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+/* --- FOOTER --- */
+
+footer {
+    margin-top: 80px;
+    padding: 20px;
+    font-size: 12px;
+    color: #666;
+    letter-spacing: 2px;
+}

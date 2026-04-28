@@ -1,0 +1,128 @@
+/* 🌈 styles.css — Estilo bakanísimo y artístico 🌈 */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap');
+
+/* 🎨 Fondo general */
+body {
+  background: radial-gradient(circle at top right, #ff8cff, #6b5bff, #00eaff);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* 🌀 Título animado */
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+  animation: parpadeo 1.8s infinite alternate;
+  margin-bottom: 20px;
+}
+
+@keyframes parpadeo {
+  from { opacity: 1; }
+  to { opacity: 0.7; }
+}
+
+/* ✨ Párrafo */
+p {
+  font-size: 1.2em;
+  color: #fff;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1em 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  margin-bottom: 40px;
+}
+
+/* 🎭 Formulario */
+form {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3), 0 0 15px #00eaff inset;
+  display: inline-block;
+  text-align: left;
+}
+
+/* 🧩 Etiquetas */
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #ffde59;
+}
+
+/* 🕹️ Inputs */
+input[type="text"],
+input[type="search"],
+input[type="apellidos"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1em;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* 🚀 Botón */
+input[type="submit"] {
+  margin-top: 25px;
+  background: linear-gradient(45deg, #00ffcc, #ff00d4);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #ff00d4, 0 0 40px #00ffcc;
+}
+
+/* 💫 Efecto flotante */
+form {
+  animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* 🌟 Scrollbar personalizada (por si hay overflow) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff00d4, #00eaff);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}

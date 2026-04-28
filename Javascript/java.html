@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TRAP ESPAÑOL</title>
+</head>
+
+<body>
+
+    <dialog id="alert">
+
+
+        <div>
+            <h2>Sticky</h2>
+            <img style="height: 250px;" src="sticky ma.jpg" alt="foto" onclick="alert('Has hecho caca!')">
+        </div>
+
+        <div id="status">
+            <img style="height: 250px;" src="sticky ma.jpg" alt="foto" onclick="alert('Has hecho caca!')">
+            <p>Sticky es un cantante de trap español conocido por su estilo único y sus letras provocativas. Ha ganado popularidad en la escena musical por su enfoque innovador y su capacidad para conectar con el público joven.</p>
+            <script>
+                document.getElementById("imageExample").addEventListener("load", function() {
+                    document.getElementById("status").insertText = "¡Bienvenido al mundo del Trap Español!";
+                });
+            </script>
+            <p>Sticky win the award</p>
+            <button id="close" onclick="document.getElementById('alert').close()">Ok</button>
+    </dialog>
+    <button id="show" onclick="document.getElementById('alert').showModal()">Mostrar</button>
+    </div>
+
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Artista</th>
+                <th>Álbum</th>
+                <th>Año</th>
+            </tr>
+        </thead>
+
+        <tbody id="cuerpo_tabla"></tbody>
+
+        <template id="usuario">
+            <tr>
+                <td class="nombre"></td>
+                <td class="discos"></td>
+                <td class="año"></td>
+            </tr>
+        </template>
+    </table>
+
+    <script>
+        const usuarios = [{
+            nombre: "Yung Beef",
+            discos: "ADROMICFMS 4",
+            año: 2021
+        }, {
+            nombre: "C.Tangana",
+            discos: "Lírica Mortal",
+            año: 2020
+        }, {
+            nombre: "Sticky",
+            discos: "Tu me dejaste de querer",
+            año: 2019
+        }];
+
+        const tabla = document.getElementById("table");
+        const usuarioTemplate = document.getElementById("usuario");
+        const tbody_tabla = document.getElementById("cuerpo_tabla");
+
+        usuarios.forEach((usuario) => {
+            const clone = usuarioTemplate.content.cloneNode(true);
+            clone.querySelector(".nombre").textContent = usuario.nombre;
+            clone.querySelector(".discos").textContent = usuario.discos;
+            clone.querySelector(".año").textContent = usuario.año;
+            tbody_tabla.appendChild(clone);
+        });
+    </script>
+
+    <script>
+        alert("Bienvenido al mundo del Trap Español");
+    </script>
+
+    <details>
+        <summary>Cantantes</summary>
+        <h2>Yung Beef</h2>
+        <img style="height: 250px;" src="yung beef.jpg" alt="foto">
+    </details>
+    <dialog id="alert">
+        <p>Sticky win the award</p>
+        <button id="close" onclick="document.getElementById('alert').close()">Ok</button>
+    </dialog>
+    <button id="show" onclick="document.getElementById('alert').showModal()">Mostrar</button>
+
+    <h3 contenteditable>Título</h3>
+    <div contenteditable>
+        <p>Contenido editable</p>
+    </div>
+</body>
+
+</html>

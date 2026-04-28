@@ -1,0 +1,154 @@
+/* ------------------------------
+   ESTILO GENERAL DE LA PÁGINA
+------------------------------ */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6f8fb;
+  color: #333;
+  margin: 0;
+  padding: 40px;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   ENCABEZADOS Y TITULOS
+------------------------------ */
+h1 {
+  font-family: "Playfair Display", serif; /* elegante y artística */
+  font-size: 2.5em;
+  text-align: center;
+  color: #34568B; /* azul formal */
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* ------------------------------
+   FORMULARIO
+------------------------------ */
+form {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #ffffff;
+  border: 1px solid #d9e1ec;
+  border-radius: 10px;
+  padding: 25px 40px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ------------------------------
+   FIELDSETS Y LEGENDS
+------------------------------ */
+fieldset {
+  border: 1px solid #cfd9e5;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #f9fbfd;
+}
+
+legend {
+  font-family: "Playfair Display", serif;
+  color: #2b3a67;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* ------------------------------
+   ETIQUETAS E INPUTS
+------------------------------ */
+label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="file"],
+select,
+input[list] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #c3ccd9;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+input[list]:focus {
+  border-color: #34568B;
+  outline: none;
+  box-shadow: 0 0 4px rgba(52, 86, 139, 0.3);
+}
+
+/* ------------------------------
+   CHECKBOXES Y RANGE
+------------------------------ */
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 5px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #34568B;
+  cursor: pointer;
+}
+
+/* ------------------------------
+   BOTONES
+------------------------------ */
+input[type="submit"],
+button[type="reset"] {
+  background-color: #34568B;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-right: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #26476D;
+  transform: scale(1.03);
+}
+
+button[type="reset"] {
+  background-color: #ccc;
+  color: #333;
+}
+
+button[type="reset"]:hover {
+  background-color: #b3b3b3;
+  transform: scale(1.03);
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}

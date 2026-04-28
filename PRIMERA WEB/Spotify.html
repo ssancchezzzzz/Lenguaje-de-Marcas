@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SoundExperience Grammy Awards 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>GRAMMY AWARDS 2025 NOMINATIONS</h1>
+        <nav>
+            <label for="busqueda">ÁLBUMES:</label>
+            <input type="search" id="busqueda" name="busqueda" placeholder="Buscar...">
+            <label for="busqueda">VIDEOCLIPS:</label>
+            <input type="search" id="busqueda" name="busqueda" placeholder="Buscar...">
+            <label for="busqueda">NOMINACIONES:</label>
+            <input type="search" id="busqueda" name="busqueda" placeholder="Buscar...">
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>ÁLBUMES DESTACADOS DENTRO DE LA CULTURA DEL TRAP</h2>
+            <p>El diseño gráfico de portadas de música es una parte esencial de la identidad visual de un álbum o sencillo. Una portada bien diseñada puede atraer a nuevos oyentes, comunicar el estilo del artista y hacer que una producción destaque en plataformas
+                digitales o físicas.</p>
+            <img style="height: 250px;" src="pink.jpg" alt="descripcion alternativa">
+            <img style="height: 250px;" src="sticky ma.jpg" alt="descripcion alternativa">
+            <img style="height: 250px;" src="yung beef.jpg" alt="descripcion alternativa">
+        </article>
+
+        <article>
+            <h2>VIDEOCLIPS DESTACADOS DENTRO DE LA CULTURA DEL TRAP</h2>
+            <p>El trap es un género musical que se originó en el sur de EE. UU. y se caracteriza por sus ritmos electrónicos, sintetizadores, cajas de ritmos y uso de autotune, con influencias del rap, el hip hop y otros estilos. A menudo reivindica temas
+                como la vida en barrios marginales, la supervivencia, el dinero, las drogas y el sexo, relatando vivencias y realidades que los jóvenes sienten como auténticas.</p>
+            <video controls width="250" height="180">
+    <source src="Diablosong.mp4" type="video/mp4">
+    </video>
+            <video controls width="250" height="180">
+    <source src="Dracukeo.mp4" type="video/mp4">
+    </video>
+            <video controls width="250" height="180">
+    <source src="malibU.mp4" type="video/mp4">
+    </video>
+        </article>
+
+        <aside>
+            <h3>ARTISTAS NOMINADOS</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li>
+                    <img src="foto1.jpg" alt="Yung Beef" width="40" height="40" style="vertical-align: middle; border-radius: 50%; margin-right: 8px;">
+                    <a href="https://yungbeef.com/">YUNG BEEF, PRIMER NOMINADO</a>
+                </li>
+                <li>
+                    <img src="foto2.jpg" alt="Sticky M.A." width="40" height="40" style="vertical-align: middle; border-radius: 50%; margin-right: 8px;">
+                    <a href="https://tienda-stickyma.com/">STICKY M.A., SEGUNDO NOMINADO</a>
+                </li>
+                <li>
+                    <img src="foto3.jpg" alt="Kidd Keo" width="40" height="40" style="vertical-align: middle; border-radius: 50%; margin-right: 8px;">
+                    <a href="https://kiddkeo.com/">KIDD KEO, TERCER NOMINADO</a>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Contacto: info@musicaactual.com | Creado por Pablo Sánchez | Instagram: @grammy2025 | © 2025 GRAMMY</p>
+    </footer>
+    <script>
+        const btnCargar = document.getElementById("cargar");
+
+        function activarBuscador() {
+            const buscador = document.getElementById("buscador");
+
+            buscador.addEventListener("input", filtrar);
+        }
+
+        function activarFiltroCategoria() {
+            const select = document.getElementById("filtroCategoria");
+
+            select.addEventListener("change", filtrar);
+        }
+
+        function filtrar() {
+            const texto = document.getElementById("buscador").value.toLowerCase();
+            const categoria = document.getElementById("filtroCategoria").value;
+
+            let tarjetas = document.querySelectorAll(".arma");
+
+            tarjetas.forEach(t => {
+                let nombre = t.getAttribute("data-nombre");
+                let cat = t.getAttribute("data-categoria");
+
+                let coincideTexto = nombre.includes(texto);
+                let coincideCategoria = categoria === "todas" || cat === categoria;
+
+                t.style.display = (coincideTexto && coincideCategoria) ? "" : "none";
+            });
+        }
+
+        const btnCargor = document.getElementById("Salir");
+
+        function activarBuscador() {
+            const buscador = document.getElementById("buscador");
+
+            buscador.addEventListener("input", filtrar);
+
+        }
+
+        function activarFiltrarCategoria() {
+            const select = document.getElementById("filtrarCategoria");
+
+            select.addEventLiestener("change2", filtrar)
+        }
+
+        function filtrarara() {
+            const texto = document.getElementById("buscador").value.toLowerCase();
+            const categoria = document.getElementById("filtrarCategoria").value;
+
+            let tarjetas = document.querySelectorAll(".arma");
+            tarjetas.forEach(t => {
+                let nombre = t.getAttribute("data-nombre");
+                let cat = t.getAttribute("data-categoria");
+
+                let coincideTexto = nombre.includes(texto);
+                let coincideCategoria = categoria === "todas" || cat === categoria;
+
+                t.style.display = (coincideTexto && coincideCategoria) ? "" : "none";
+            });
+        }
+    </script>
+
+</body>
+
+</html>

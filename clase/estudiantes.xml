@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<estudiantes xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNameSpaceSchemaLocation= "estudiantes.xsd">
+
+    <estudiante>
+        <nombre>Mariano Rajoy</nombre>
+        <edad>16</edad>
+        <curso>SMR</curso>
+    </estudiante>
+
+    <estudiante>
+        <nombre>Albert Montoya</nombre>
+        <edad>17</edad>
+        <curso>ASIR</curso>
+    </estudiante>
+
+    <estudiante>
+        <nombre>Ana Perez</nombre>
+        <edad>34</edad>
+        <curso>DAW</curso>
+    </estudiante>
+  
+    <estudiante>
+        <nombre>Adam Moises</nombre>
+        <edad>25</edad>
+        <curso>DAM</curso>
+    </estudiante>
+
+</estudiantes>

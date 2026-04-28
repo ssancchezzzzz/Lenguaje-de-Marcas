@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+}
+
+h2 {
+    margin: 20px;
+}
+
+#contenedorArtistas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta {
+    background: #222;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 220px;
+}
+
+.tarjeta h2 {
+    color: #f5c542;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: #f5c542;
+    border: none;
+    border-radius: 5px;
+}
+
+#ganador {
+    font-size: 22px;
+    margin: 20px;
+    color: #ffffff;
+}
+
+#reiniciarVotaciones {
+    background: #f5c542;
+    color: rgb(0, 0, 0);
+}

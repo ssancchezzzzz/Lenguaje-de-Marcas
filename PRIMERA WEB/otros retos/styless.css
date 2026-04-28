@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Rubik+Wet+Paint&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0d0d0d, #1a0028);
+  color: #f8f8f8;
+}
+
+/* --- TÍTULOS ESTILO GRAFFITI --- */
+h1, h2, h3 {
+  font-family: 'Rubik Wet Paint', cursive;
+  color: #ff00cc;
+  text-shadow: 0 0 10px #ff00cc, 0 0 20px #3333ff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* --- ENCABEZADO --- */
+header {
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-shadow: 0 0 10px #ff00cc;
+}
+
+/* --- BUSCADOR --- */
+nav {
+  margin-top: 10px;
+}
+
+nav input[type="search"] {
+  padding: 8px 10px;
+  width: 220px;
+  border: 2px solid #ff00cc;
+  border-radius: 25px;
+  background-color: #0f0f0f;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+nav input[type="search"]:focus {
+  outline: none;
+  border-color: #00e6ff;
+  box-shadow: 0 0 10px #00e6ff;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: center;
+}
+
+article {
+  flex: 1 1 40%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  margin: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff00cc;
+}
+
+/* --- BARRA LATERAL --- */
+aside {
+  flex: 1 1 100%;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(5px);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #ff00cc;
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+  background: linear-gradient(90deg, #3333ff, #ff00cc);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* --- ENLACES --- */
+a {
+  color: #ff66ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00e6ff;
+}

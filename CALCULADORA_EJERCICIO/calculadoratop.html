@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Calculadora</title>
+</head>
+
+<body>
+
+    <h2>Ejercicio Calculadora</h2>
+    <p>Introduce un número y la web te dirá si es par o impar, y también mostrará su cuadrado.</p>
+
+    <input type="number" id="numero" placeholder="Introduce un número">
+    <button onclick="mostrar()">Mostrar</button>
+
+    <p>Veces que se ha enviado un número: <span id="contador">0</span></p>
+
+    <dialog id="modal">
+        <p id="resultado"></p>
+        <button onclick="cerrarModal()">Cerrar</button>
+    </dialog>
+
+    <script>
+        let contador = 0;
+
+        function mostrar() {
+            const numeroInput = document.getElementById("numero");
+            const resultado = document.getElementById("resultado");
+            const modal = document.getElementById("modal");
+            if (numeroInput.value == "") {
+                resultado.textContent = "Debes introducir un número.";
+            } else {
+                const numero = Number(numeroInput.value);
+                const paridad = numero % 2 == 0 ? "par" : "impar";
+                const cuadrado = numero * numero;
+                resultado.textContent = `El número ${numero} es ${paridad} y su cuadrado es ${cuadrado}.`;
+                contador++;
+                document.getElementById("contador").textContent = contador;
+            }
+
+            modal.showModal();
+            numeroInput.value = "";
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal").close();
+        }
+    </script>
+</body>
+
+</html>
