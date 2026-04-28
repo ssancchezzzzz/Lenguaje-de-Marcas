@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>INSCRIPCIONES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Registro</h1>
+    <p>Introduce un nombre para recibir un saludo</p>
+    <input type="text" id="nombre" placeholder="Escribe tu nombre...">
+    <button id="abrir">Enviar</button>
+    <p id="contador" contadortexto>Has hecho click 0 veces</p>
+
+    <dialog id="modal">
+        <p id="mensaje"></p>
+        <button id="cerrar">Cerrar</button>
+    </dialog>
+
+    <script>
+        let contador = 0;
+        const botonAbrir = document.getElementById("abrir");
+        const botonCerrar = document.getElementById("cerrar");
+        const modal = document.getElementById("modal");
+        const mensaje = document.getElementById("mensaje");
+        const nombre = document.getElementById("nombre");
+        const contadortexto = document.getElementById("contador");
+
+        botonAbrir.addEventListener("click", function() {
+            const nombreUsuario = nombre.value.trim();
+            if (nombreUsuario == "") {
+                mensaje.innerText = "Por favor, introduce un nombre válido.";
+            } else {
+                mensaje.innerText = `Hola, ${nombreUsuario}! bienvenido a la fiesta del pijama!`;
+                contador++;
+                contadortexto.textContent = `Has hecho click ${contador} veces`;
+            }
+            modal.showModal();
+            nombre.value = "";
+        });
+
+        botonCerrar.addEventListener("click", function() {
+            modal.close();
+        });
+    </script>
+
+
+</body>

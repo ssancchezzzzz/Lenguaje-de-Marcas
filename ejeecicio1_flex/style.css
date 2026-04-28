@@ -1,0 +1,49 @@
+body {
+    background: linear-gradient(to left, purple, yellow, blue, red, green);
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-end;
+    height: 80vh;
+}
+
+.tarjeta {
+    height: 100px;
+    background-color: rgb(128, 128, 238);
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-basis: 120px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.tarjeta-1 {
+    align-self: center;
+    background-color: purple;
+}
+
+.tarjeta-3 {
+    flex-grow: 2;
+    background-color: yellow;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tarjeta-5 {
+    flex-shrink: 2;
+    background-color: black;
+}

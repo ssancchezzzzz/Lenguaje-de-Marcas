@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<galeria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="galeria.xsd">
+
+    <arma>
+        <nombre>AK-47</nombre>
+        <imagen>img/AK-47_assault_rifle.jpg</imagen>
+        <categoria>Largo alcance</categoria>
+        <descripcion>Rifle de asalto diseñado por Mijaíl Kaláshnikov en 1947.</descripcion>
+        <año>1947</año>
+    </arma>
+
+    <arma>
+        <nombre>M16</nombre>
+        <imagen>img/m16.jpg</imagen>
+        <categoria>Largo alcance</categoria>
+        <descripcion>Rifle de asalto estadounidense adoptado en 1964.</descripcion>
+        <año>1964</año>
+    </arma>
+    <arma>
+        <nombre>G36</nombre>
+        <imagen>img/g36.jpg</imagen>
+        <categoria>Largo alcance</categoria>
+        <descripcion>El Heckler y Koch G36 es un fusil de asalto modular de origen alemán, que se ha convertido en el arma estándar de varias fuerzas armadas y policiales en todo el mundo, incluyendo las Fuerzas Armadas Españolas desde 1999.</descripcion>
+        <año>1999</año>
+    </arma>
+
+    <arma>
+        <nombre>Glock 17</nombre>
+        <imagen>img/glock17.jpg</imagen>
+        <categoria>Corto alcance</categoria>
+        <descripcion>Pistola semiautomática desarrollada por la empresa austriaca Glock.</descripcion>
+        <año>1982</año>
+    </arma>
+    <arma>
+        <nombre>Remington modelo 95</nombre>
+        <imagen>img/ecnv51xk.jpg</imagen>
+        <categoria>Corto alcance</categoria>
+        <descripcion>La Remington Modelo 95 es una icónica pistola de bolsillo de dos cañones, comúnmente reconocida como una double derringer, que se hizo muy popular en el Viejo Oeste. Se fabricó durante casi 70 años, desde 1866 hasta 1935, y es una de las armas de fuego más famosas y reconocibles del mundo.</descripcion>
+        <año>1866</año>
+    </arma>
+    <arma>
+        <nombre>Webley</nombre>
+        <imagen>img/Webley.jpg</imagen>
+        <categoria>Corto alcance</categoria>
+        <descripcion>El revólver Webley fue el arma de servicio estándar de las fuerzas armadas del Reino Unido y la Commonwealth desde 1887 hasta 1963. Es un revólver de apertura vertical con eyección automática de los casquillos, conocido por su robustez y fiabilidad. </descripcion>
+        <año>1887</año>
+    </arma>

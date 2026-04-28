@@ -1,0 +1,7 @@
+Marco y yo hemos debatido entre si poner el onclick y realizar la función directamente para que sea este un atributo o realizar directamente un click 
+para que fuese un evento, hemos discutido sobre cual es mejor y cada uno ha decidido hacerlo de diferente manera, yo he optado por el onclick que dimos 
+con fran debido a que lo entendí mejor y prefería utilizar este y realizar la función directamente abajo.
+
+en el div, he utilizado el onkeyup y onchange que me he ayudado de la ia y de los apuntes, no he conseguido sacarlo con el select, asi que lo envió asi 
+porque es la forma que mejor he comprendido para hacerlo y no creo que sea una mala opción habiéndolo entendido, sabiendo que el select no se como funciona 
+para la selección por categorías.

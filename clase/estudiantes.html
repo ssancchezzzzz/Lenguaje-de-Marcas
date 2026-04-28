@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estudiantes</title>
+</head>
+
+<body>
+    <h1>Lista de Estudiantes</h1>
+    <button id="cargar">Cargar Estudiantes</button>
+    <div id="resultado"></div>
+
+    <script>
+        let estudiantes = [];
+        const btnCargar = document.getElementById("cargar");
+        const resultado = document.getElementById("resultado");
+
+        function mostrarEstudiantes(lista) {
+            resultado.innerHTML = `<p>Total: ${lista.length} estudiantes</p>`;
+            for (let e of lista) {
+                resultado.innerHTML += `<div class="estudiante">
+                    <p>Nombre: ${e.nombre}</p>
+                    <p>Edad:${e.edad}</p>
+                    <p>Curso: ${e.curso}</p>
+                </div>`;
+            }
+        }
+
+        btnCargar.addEventListener("click", function() {
+            fetch("estudiantes.xml")
+                .then((response) => response.text())
+                .then((data) => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, "text/xml");
+                    const estudiantesXML = xmlDoc.getElementsByTagName("estudiante");
+                    estudiantes = [];
+                    for (let estudiante of estudiantesXML) {
+                        const nombre = estudiante.getElementsByTagName("nombre")[0].textContent;
+                        const edad = estudiante.getElementsByTagName("edad")[0].textContent;
+                        const curso = estudiante.getElementsByTagName("curso")[0].textContent;
+                        estudiantes.push({
+                            nombre,
+                            edad,
+                            curso
+                        });
+                    }
+                    mostrarEstudiantes(estudiantes);
+                })
+                .catch(error => console.error("Error al cargar el archivo XML:", error));
+        });
+    </script>
+</body>
+
+</html>

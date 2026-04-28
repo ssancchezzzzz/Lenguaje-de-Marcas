@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+</head>
+
+<body>
+    <!-- Titulo e inicio del formulario de registro -->
+
+    <h1>Registro de Usuario</h1>
+    <form id="registroUsuario" action="index.html" method="POST">
+        <label for="username">Nombre completo:</label><br />
+        <input type="text" id="username" name="username" required /><br /><br />
+
+        <!-- correo electronico del formulario de registro -->
+
+        <label for="email">Correo electrónico:</label><br />
+        <input type="email" id="email" name="email" placeholder="email@email.com" /><br /><br />
+
+        <!-- contraseña del formulario de registro -->
+
+        <label for="password">Contraseña:</label><br />
+        <input type="password" id="password" name="password" minlength="6" required /><br /><br />
+
+        <!-- selección de categoría del formulario de registro -->
+        <label for="categoria"> Seleccione su categoría favorita: </label
+      ><br /><br />
+            <select id="categoria" name="categoria" required>
+        <option value="Categorías" disabled selected>Categorías...</option>
+        <br /><br />
+        <optgroup label="Armas de largo alcance">
+          <option value="Rifles de caza">Rifles de caza</option>
+          <option value="Fusiles de precision">Fusiles de precisión</option>
+          <option value="Carabinas">Carabinas</option>
+        </optgroup>
+        <optgroup label="Armas de corto alcance">
+          <option value="Pistolas semiautomaticas">Historia</option>
+          <option value="Revolveres">Revólveres</option>
+          <option value="Derringers">Derringers</option>
+        </optgroup></select><br /><br />
+        <input id="botonEnviar" type="submit" value="Registrarse" />
+        <dialog id="confirmacionRegistro">
+          <p>Registro exitoso!!</p>
+          <button id="cerrarDialog">Aceptar</button>
+        </dialog>
+    </form>
+    <!-- Javascript para darle vida a los botones y para la comprobación -->
+    <script>
+        const formulario = document.getElementById('registroUsuario');
+        const dialogo = document.getElementById('confirmacionRegistro');
+        const botonCerrar = document.getElementById('cerrarDialog');
+        // Función para validar que todos los campos del formulario estén completos
+    
+        function validarTodosLosCampos(formElement) {
+            const datos = new FormData(formElement);
+            // Recorremos todos los pares [nombre, valor] del formulario
+            for (const [nombre, valor] of datos.entries()) {
+                // Comprobamos si el valor está vacío después de quitar espacios
+                if (valor.trim() === '' || valor === 'Categorías') { 
+                    // Si encuentra un campo vacío, retorna inmediatamente false
+                    return false; 
+                }
+            }
+            // Si el bucle termina sin encontrar campos vacíos, retorna true
+            return true; 
+        }
+        // Evento para el botón de enviar el formulario
+
+        formulario.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío inmediato del formulario, daba error y reseteaba el formulario si lo pongo en otro lado
+             if (validarTodosLosCampos(formulario)) {
+                 dialogo.showModal(); // Muestra el diálogo de confirmación
+            } else {
+                alert('Por favor, complete todos los campos antes de continuar.'); // Alerta si hay campos vacíos
+            }
+           
+        });
+        // Evento para cerrar el diálogo y redirigir al index.html
+        botonCerrar.onclick = function() {
+            formulario.submit();
+            window.location.href = 'index.html';
+
+            dialogo.close(); };
+           
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+button,
+label,
+input,
+select {
+    margin-bottom: 15px;
+    display: block;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(51, 131, 131);
+    margin: 40px;
+}
+
+h1 {
+    color: rgb(211, 22, 154);
+    font-size: 30px;
+}
+
+button[id="cargar"] {
+    padding: 8px;
+    background-color: chocolate;
+    color: white;
+    border: none;
+    border-radius: 400px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[id="buscar"] {
+    padding: 6px;
+    border: 1px solid rgb(161, 175, 32);
+    border-radius: 40px;
+}
+
+select[id="select"] {
+    padding: 6px;
+    border: 1px solid rgb(161, 175, 32);
+    border-radius: 40px;
+}
+
+button:hover {
+    background-color: rgb(255, 165, 0);
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid orange;
+}
+
+div[data-task] {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+div[data-status="hecha"] {
+    background-color: rgb(144, 238, 144);
+    opacity: 0, 7;
+    text-decoration: line-through;
+}
+
+div[data-status="pendiente"] {
+    background-color: rgb(255, 255, 102);
+}
+
+div[data-priority="alta"] {
+    border-left: 5px solid red;
+}
+
+div[data-priority="media"] {
+    border-left: 5px solid yellow;
+}
+
+div[data-priority="baja"] {
+    border-left: 5px solid green;
+}
+
+button[data-id] {
+    margin-top: 10px;
+    background-color: burlywood;
+}

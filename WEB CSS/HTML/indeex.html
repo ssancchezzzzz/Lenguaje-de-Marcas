@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿PODRÁS SER FUTBOLISTA?</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body onload="saludo()">
+  <h1>¿PODRÁS SER FUTBOLISTA?</h1>
+  <p>Rellena el formulario para ver tu compatibilidad con el fútbol.</p>
+
+  <form id="futbolForm" onsubmit="enviarFormulario(event)" enctype="multipart/form-data">
+
+    <div class="campo">
+      <label for="nombre" required>Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Nombre...">
+      <button type="button" class="boton-reset" onclick="document.getElementById('nombre').value=''">Reset</button>
+    </div>
+
+    <div class="campo">
+      <label for="apellidos" required>Edad:</label>
+      <input type="text" id="apellidos" name="apellidos" placeholder="Apellido...">
+      <button type="button" class="boton-reset" onclick="document.getElementById('apellidos').value=''">Reset</button>
+    </div>
+
+    <div class="campo">
+      <label for="artista" type="email" required>Correo electrónico:</label>
+      <input type="search" id="artista" name="artista" placeholder="Nombre...">
+      <button type="button" class="boton-reset" onclick="document.getElementById('artista').value=''">Reset</button>
+    </div>
+
+    <div class="campo">
+      <label for="comida">Comida:</label>
+      <input type="search" id="comida" name="comida" placeholder="Escribe...">
+      <button type="button" class="boton-reset" onclick="document.getElementById('comida').value=''">Reset</button>
+    </div>
+
+    <div class="campo">
+      <label for="equipo">Equipo de fútbol:</label>
+      <input type="search" id="equipo" name="equipo" placeholder="Equipo...">
+      <button type="button" class="boton-reset" onclick="document.getElementById('equipo').value=''">Reset</button>
+    </div>
+
+    <div class="campo">
+      <label>Pierna:</label>
+      <input type="checkbox" id="pierna1" name="pierna" value="grande">Grande
+      <input type="checkbox" id="pierna2" name="pierna" value="chiquitita">Chiquitita
+      <input type="checkbox" id="pierna3" name="pierna" value="marco">Como la de Marco
+      <br>
+      <button type="button" class="boton-reset"
+        onclick="document.querySelectorAll('input[name=pierna]').forEach(c => c.checked = false)">Reset</button>
+    </div>
+
+    <div class="campo">
+      <label for="posicion">Posición favorita:</label>
+      <select id="posicion" name="posicion">
+        <optgroup label="Destacadas">
+        <option value="">Selecciona...</option>
+        <option value="portero">DAM</option>
+        <option value="defensa">DAW</option>
+        <option value="centrocampista">ASIR</option>
+        </optgroup>
+        <optgroup label="Otras">
+        <option value="a_cuatro">ENFERMERIA</option>
+        <option value="a_cuatro">DIETETICA</option>
+        </optgroup>
+      </select>
+      <button type="button" class="boton-reset" onclick="document.getElementById('posicion').value=''">Reset</button>
+    </div>
+
+    <div class="campo">
+      <label for="archivo">Adjuntar archivo:</label>
+      <input type="file" id="archivo" name="archivo">
+      <button type="button" class="boton-reset" onclick="document.getElementById('archivo').value=''">Reset</button>
+    </div>
+
+    <input type="submit" value="Enviar" class="boton-enviar">
+  </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+label,
+select,
+button,
+p {
+    display: block;
+    margin: 20px;
+}
+
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(255, 0, 200);
+    margin: 40px;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+}
+
+button:hover {
+    background-color: rgb(255, 20, 147);
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+button:focus {
+    background-color: blueviolet;
+}

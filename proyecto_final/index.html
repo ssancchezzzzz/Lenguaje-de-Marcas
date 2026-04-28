@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Conectamos el archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>CATALOGO ARMAS</title>
+</head>
+
+<body>
+
+    <!-- TÍTULO PRINCIPAL DE LA PÁGINA -->
+    <h1>Catálogo de Armas</h1>
+
+    <!-- Botón que carga la galería desde el archivo XML -->
+    <button id="btnCargar" onclick="cargarDatos()">Cargar Galería</button>
+
+    <!-- Botón que lleva a la página de registro -->
+    <button id="registro">Ir a Registro</button></a>
+    <dialog id="dialogo">
+        <p>Redirigiendo al registro de usuario...</p>
+        <button id="cerrarDialog">Aceptar</button>
+    </dialog>
+
+    <hr>
+
+    <!-- Panel de controles (buscador + filtro). Al inicio está oculto -->
+    <div id="controles" style="display:none;">
+
+        <!-- Contador dinámico que muestra cuántas armas coinciden -->
+        <p id="contador"></p>
+
+        <!-- Buscador por nombre -->
+        <input type="text" id="buscador" placeholder="Buscar por nombre..." onkeyup="actualizarLista()">
+
+        <!-- Filtro de categoría (se llena automáticamente leyendo el XML) -->
+        <select id="filtroCategoria" onchange="actualizarLista()">
+            <option value="todas">Todas las categorías</option>
+        </select>
+    </div>
+
+    <!-- Aquí aparecerán todas las tarjetas de armas -->
+    <div id="contenedor-armas"></div>
+
+
+    <!-- Script principal (funciones y lógica del catálogo) -->
+    <script>
+        const botonCerrar = document.getElementById('cerrarDialog');
+        const registro = document.getElementById('registro');
+        const dialogo = document.getElementById('dialogo');
+
+
+        /* 
+         *Lista donde guardaremos todas las armas cargadas del XML.
+         *Luego la usaremos para buscarlas y filtrarlas.
+         */
+        let listaArmas = [];
+
+
+        /* 
+         *Función principal: Lee el archivo XML, extrae sus datos,
+         *llena la lista de armas y muestra los controles de búsqueda.
+         */
+
+        function cargarDatos() {
+
+            fetch("galeria.xml") // Cargamos el archivo XML
+                .then(response => response.text()) // Lo convertimos en texto
+                .then(str => {
+
+                    // Convertimos el texto en un documento XML manipulable
+                    let parser = new DOMParser();
+                    let xmlDoc = parser.parseFromString(str, "text/xml");
+
+                    // Obtenemos todos los elementos <arma> del XML
+                    let armasXML = xmlDoc.getElementsByTagName("arma");
+
+                    // Vaciamos la lista por si se recarga
+                    listaArmas = [];
+
+                    /* 
+                       Recorremos cada <arma> del XML y convertimos
+                       sus elementos en un objeto JavaScript más fácil de manejar.
+                    */
+                    for (let i = 0; i < armasXML.length; i++) {
+
+                        let item = {
+                            nombre: armasXML[i].getElementsByTagName("nombre")[0].textContent,
+                            imagen: armasXML[i].getElementsByTagName("imagen")[0].textContent,
+                            categoria: armasXML[i].getElementsByTagName("categoria")[0].textContent,
+                            descripcion: armasXML[i].getElementsByTagName("descripcion")[0].textContent,
+                            año: armasXML[i].getElementsByTagName("año")[0].textContent
+                        };
+
+                        listaArmas.push(item); // Guardamos cada arma en la lista global
+                    }
+
+                    // Llenamos el filtro de categorías
+                    rellenarSelectCategorias();
+
+                    // Mostramos los controles (buscador + filtro)
+                    document.getElementById("controles").style.display = "block";
+
+                    // Dibujamos las tarjetas en pantalla
+                    actualizarLista();
+                })
+                .catch(err => console.error("Error:", err)); // Si falla, lo mostramos en consola
+        }
+
+
+        /*
+           Función: Rellena el <select> con todas las categorías
+           sin repetir ninguna.
+        */
+        function rellenarSelectCategorias() {
+
+            let select = document.getElementById("filtroCategoria");
+            let categoriasVistas = []; // Lista temporal de categorías ya añadidas
+
+            // Recorremos las armas cargadas
+            for (let i = 0; i < listaArmas.length; i++) {
+                let cat = listaArmas[i].categoria;
+
+                // Si todavía no se añadió, la agregamos al select
+                if (!categoriasVistas.includes(cat)) {
+                    categoriasVistas.push(cat);
+                    select.innerHTML += `<option value="${cat}">${cat}</option>`;
+                }
+            }
+        }
+
+
+        /*
+           Función principal del filtrado:
+           Filtra las armas según el texto buscado y la categoría elegida,
+           luego dibuja solo las que coinciden.
+        */
+        function actualizarLista() {
+
+            let contenedor = document.getElementById("contenedor-armas");
+            let textoBusqueda = document.getElementById("buscador").value.toLowerCase();
+            let categoriaSeleccionada = document.getElementById("filtroCategoria").value;
+
+            contenedor.innerHTML = ""; // Limpiamos el contenido previo
+            let contador = 0; // Contador de armas mostradas
+
+            // Recorremos toda la lista de armas
+            for (let i = 0; i < listaArmas.length; i++) {
+
+                let arma = listaArmas[i];
+
+                // ¿Coincide con el texto buscado?
+                let coincideNombre = arma.nombre.toLowerCase().includes(textoBusqueda);
+
+                // ¿Coincide con la categoría seleccionada?
+                let coincideCategoria = (categoriaSeleccionada === "todas") || (arma.categoria === categoriaSeleccionada);
+
+                // Si coincide con ambos filtros, la mostramos
+                if (coincideNombre && coincideCategoria) {
+
+                    contenedor.innerHTML += `
+                        <div class="arma">
+                            <p><strong>Nombre:</strong> ${arma.nombre}</p>
+                            <img src="${arma.imagen}" alt="${arma.nombre}" width="200">
+                            <p><strong>Categoría:</strong> ${arma.categoria}</p>
+                            <p><strong>Descripción:</strong> ${arma.descripcion}</p>
+                            <p><strong>Año:</strong> ${arma.año}</p>
+                        </div>
+                        <hr>
+                    `;
+
+                    contador++; // Sumamos una al total mostrado
+                }
+            }
+
+            // Actualizamos el contador en pantalla
+            document.getElementById("contador").innerText = "Total mostradas: " + contador;
+        }
+
+        // Código para el diálogo de redirección al registro
+        registro.onclick = function() {
+            dialogo.showModal();
+        };
+
+        // Evento para cerrar el diálogo y redirigir al registro.html
+        botonCerrar.onclick = function() {
+            dialogo.close();
+            window.location.href = 'registro.html';
+        };
+    </script>
+
+</body>
+
+</html>

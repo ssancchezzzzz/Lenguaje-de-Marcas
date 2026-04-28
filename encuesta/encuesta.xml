@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<artistas>
+
+    <artista>
+        <nombre>Quevedo</nombre>
+        <cancion>Columbia</cancion>
+        <cancion>Punto G</cancion>
+        <votos>0</votos>
+    </artista>
+
+    <artista>
+        <nombre>Morad</nombre>
+        <cancion>Motorola</cancion>
+        <cancion>Seguimos</cancion>
+        <votos>0</votos>
+    </artista>
+
+    <artista>
+        <nombre>Yung Beef</nombre>
+        <cancion>Ready Pa Morir</cancion>
+        <cancion>Million Dollar Baby</cancion>
+        <votos>0</votos>
+    </artista>
+
+    <artista>
+        <nombre>Rels B</nombre>
+        <cancion>Cómo dormiste?</cancion>
+        <cancion>A mí</cancion>
+        <votos>0</votos>
+    </artista>
+
+    <artista>
+        <nombre>Duki</nombre>
+        <cancion>Malbec</cancion>
+        <cancion>She Don’t Give a FO</cancion>
+        <votos>0</votos>
+    </artista>
+
+    <artista>
+        <nombre>Polimá Westcoast</nombre>
+        <cancion>Ultra Solo</cancion>
+        <cancion>Luccas</cancion>
+        <votos>0</votos>
+    </artista>
+
+    <artista>
+        <nombre>Cruz Cafuné</nombre>
+        <cancion>Mi Casa</cancion>
+        <cancion>Tokio</cancion>
+        <votos>0</votos>
+    </artista>
+
+    <artista>
+        <nombre>Hard GZ</nombre>
+        <cancion>Sin Ti</cancion>
+        <cancion>Yo no soy santo</cancion>
+        <votos>0</votos>
+    </artista>
+
+    <artista>
+        <nombre>Ben Yart</nombre>
+        <cancion>Calvinklein</cancion>
+        <cancion>Napapijri</cancion>
+        <votos>0</votos>
+    </artista>
+
+    <artista>
+        <nombre>Recycled J</nombre>
+        <cancion>Milagro</cancion>
+        <cancion>Sudando</cancion>
+        <votos>0</votos>
+    </artista>
+
+</artistas>

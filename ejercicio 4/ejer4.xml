@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<productos>
+
+    <producto>
+        <nombre>Dildo</nombre>
+        <categoria>Largo alcance</categoria>
+    </producto>
+
+    <producto>
+        <nombre>Satisfyer</nombre>
+        <categoria>Corto alcance</categoria>
+    </producto>
+
+    <producto>
+        <nombre>Muñeca hinchable</nombre>
+        <categoria>Medio alcance</categoria>
+    </producto>
+
+    <producto>
+        <nombre>Columpio</nombre>
+        <categoria>Largo alcance</categoria>
+    </producto>
+
+    <producto>
+        <nombre>Esposas</nombre>
+        <categoria>Corto alcance</categoria>
+    </producto>
+
+</productos>

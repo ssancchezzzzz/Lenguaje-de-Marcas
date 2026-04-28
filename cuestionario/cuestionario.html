@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>INSCRIPCIONES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>INSCRIPCIONES 2025/2026</h1>
+    <p>Rellena el formulario para FINALIZAR TU INCRIPCION.</p>
+
+    <form action="" method="get">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre" required>Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre..." required>
+            <input type="text" onblur="alert('Has perdido el foco!')">
+            <input type="text" onfocus="alert('Estas en el foco!')">
+            <br><br>
+            <label for="apellidos" required>Edad:</label>
+            <input type="text" id="edad" name="edad" placeholder="Edad..." required>
+            <br><br>
+            <label for="Telefono" type="Telefono" required>Telefono:</label>
+            <input type="text" id="telefono" name="telefono" placeholder="Telefono...">
+        </fieldset>
+        <fieldset>
+            <legend>Información academica</legend>
+            <label for="curso">Curso actual:</label>
+            <select id="curso" name="curso">
+            <option value="">Selecciona...</option>
+            <optgroup label="Ciclos Formativos Informaticos">
+            <option value="DAM">DAM</option>
+            <option value="DAW">DAW</option>
+            <option value="ASIR">ASIR</option>
+            </optgroup>
+            <optgroup label="Ciclos Formativos Sanidad">
+            <option value="enfermeria">ENFERMERIA</option>
+            <option value="dietetica">DIETETICA</option>
+            </optgroup>
+        </select><br><br>
+            <label>Modalidad:</label>
+            <input type="checkbox" id="pierna1" name="pierna" value="grande">MAÑANA
+            <input type="checkbox" id="pierna2" name="pierna" value="chiquitita">TARDE
+            <input type="checkbox" id="pierna3" name="pierna" value="marco">ONLINE
+            <br><br>
+            <label for="archivo">Adjuntar archivo de inscripcion:</label>
+            <input type="file" id="archivo" name="archivo">
+        </fieldset>
+        <fieldset>
+            <label for="interes">Área de interés:</label>
+            <input list="areas" id="interes" name="interes" placeholder="Selecciona o escribe...">
+
+            <datalist id="areas">
+      <option value="Tecnología">
+      <option value="Ciencia">
+      <option value="Arte">
+      <option value="Deportes">
+      <option value="Educación">
+      <option value="Medicina">
+      <option value="Música">
+      <option value="Economía">
+    </datalist>
+            <br><br>
+            <label for="motivacion">Motivación:</label>
+            <input type="range" id="motivacion" name="motivacion" min="0" max="100" value="50" oninput="nivel.value = this.value">
+            <output id="nivel">50</output>%
+            <br><br>
+            <label>
+      <input type="checkbox" name="datos" required>
+      Acepto el uso de mis datos personales
+    </label>
+        </fieldset>
+        <br><br>
+        <input type="submit" value="Enviar" class="boton-enviar">
+        <button type="reset">Borrar todo</button>
+    </form>
+</body>
+
+<!-- SCRIPT FUNCIONAL -->
+<script>
+    const btnLoad = document.getElementById("btnLoad");
+    const btnRegistro = document.getElementById("btnRegistro");
+    const contenidoGaleria = document.getElementById("contenidoGaleria");
+
+    let galeriaCargada = false;
+
+    // BOTÓN CARGAR GALERÍA
+    btnLoad.addEventListener("click", () => {
+        contenidoGaleria.style.display = "block";
+        galeriaCargada = true;
+
+        // Mostrar botón de registro al final
+        btnRegistro.style.display = "block";
+
+        btnLoad.disabled = true;
+        btnLoad.textContent = "Galería cargada";
+    });
+
+    // BOTÓN IR AL REGISTRO
+    btnRegistro.addEventListener("click", () => {
+        if (!galeriaCargada) {
+            alert("Primero debes cargar la galería.");
+            return;
+        }
+
+        // Redirige al registro
+        window.location.href = "registro.html";
+    });
+</script>
+
+</html>

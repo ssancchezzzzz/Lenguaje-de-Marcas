@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personas SYSTEM "personas.dtd">
+<personas>
+    
+    <persona genero= "masculino">
+        <nombre>Juan</nombre>
+        <edad>28</edad>
+    </persona>
+    <persona genero= "masculino">
+        <nombre>Adam</nombre>
+        <edad>Adam</edad>
+    </persona>
+    <!-- Este es un comentario en el XML -->
+    <persona genero= "femenino">
+        <nombre>Eva</nombre>
+        <edad>30</edad>
+    </persona>
+    <persona genero= "no binario">
+        <nombre>Alex</nombre>
+        <edad>25</edad>
+    </persona>
+
+</personas>
+<!-- Asi sería un ejemplo de un XML bien formado para un libro:
+<?xml version="1.0" encoding="UTF-8"?>
+<libro>
+    <titulo>El Principito</titulo>
+    <autor>Antoine de Saint-Exupéry</autor>
+    <año>1943</año>
+    <genero>Ficción</genero>
+    <capitulo numero="1">
+        <titulo>El encuentro</titulo>
+    </capitulo>
+    <capitulo numero="2">
+        <titulo>El planeta del rey</titulo>
+    </capitulo>
+    <sinopsis>Un joven príncipe viaja por diferentes planetas y aprende lecciones sobre la vida.</sinopsis>
+</libro>
+-->
