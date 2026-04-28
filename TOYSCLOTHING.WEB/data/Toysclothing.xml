@@ -1,14 +1,119 @@
 <products>
-    <product>
-        <name>Camiseta Beige</name>
-        <price>25</price>
-        <image>img/camiseta.png</image>
-    </product>
 
-<product>
-    <name>Sudadera Marrón</name>
-    <price>50</price>
-    <image>img/sudadera.png</image>
-</product>
+    <!-- ===== CAMISETAS (30) ===== -->
+    <category name="Camisetas">
+        <!-- 35€ -->
+        <product><name>Camiseta Básica Beige</name><price>35</price><image>img/camiseta1.png</image></product>
+        <product><name>Camiseta Básica Blanca</name><price>35</price><image>img/camiseta2.png</image></product>
+        <product><name>Camiseta Básica Negra</name><price>35</price><image>img/camiseta3.png</image></product>
+        <product><name>Camiseta Básica Marrón</name><price>35</price><image>img/camiseta4.png</image></product>
+        <product><name>Camiseta Básica Arena</name><price>35</price><image>img/camiseta5.png</image></product>
+
+        <!-- 40€ -->
+        <product><name>Camiseta Logo Frontal</name><price>40</price><image>img/camiseta6.png</image></product>
+        <product><name>Camiseta Logo Minimal</name><price>40</price><image>img/camiseta7.png</image></product>
+        <product><name>Camiseta Logo Bordado</name><price>40</price><image>img/camiseta8.png</image></product>
+        <product><name>Camiseta Street Style</name><price>40</price><image>img/camiseta9.png</image></product>
+        <product><name>Camiseta Urban Fit</name><price>40</price><image>img/camiseta10.png</image></product>
+
+        <!-- 45€ -->
+        <product><name>Camiseta Oversize Beige</name><price>45</price><image>img/camiseta11.png</image></product>
+        <product><name>Camiseta Oversize Negra</name><price>45</price><image>img/camiseta12.png</image></product>
+        <product><name>Camiseta Oversize Marrón</name><price>45</price><image>img/camiseta13.png</image></product>
+        <product><name>Camiseta Oversize Arena</name><price>45</price><image>img/camiseta14.png</image></product>
+        <product><name>Camiseta Oversize Logo</name><price>45</price><image>img/camiseta15.png</image></product>
+
+        <!-- 50€ -->
+        <product><name>Camiseta Premium Heavy</name><price>50</price><image>img/camiseta16.png</image></product>
+        <product><name>Camiseta Premium Bordada</name><price>50</price><image>img/camiseta17.png</image></product>
+        <product><name>Camiseta Premium Street</name><price>50</price><image>img/camiseta18.png</image></product>
+        <product><name>Camiseta Premium Urban</name><price>50</price><image>img/camiseta19.png</image></product>
+        <product><name>Camiseta Premium Deluxe</name><price>50</price><image>img/camiseta20.png</image></product>
+
+        <!-- extras -->
+        <product><name>Camiseta Summer Edition</name><price>38</price><image>img/camiseta21.png</image></product>
+        <product><name>Camiseta Vintage Logo</name><price>42</price><image>img/camiseta22.png</image></product>
+        <product><name>Camiseta Minimal Lines</name><price>44</price><image>img/camiseta23.png</image></product>
+        <product><name>Camiseta Soft Touch</name><price>46</price><image>img/camiseta24.png</image></product>
+        <product><name>Camiseta Classic Fit</name><price>39</price><image>img/camiseta25.png</image></product>
+        <product><name>Camiseta Street Icon</name><price>48</price><image>img/camiseta26.png</image></product>
+        <product><name>Camiseta Mono Tone</name><price>41</price><image>img/camiseta27.png</image></product>
+        <product><name>Camiseta Earth Colors</name><price>43</price><image>img/camiseta28.png</image></product>
+        <product><name>Camiseta Clean Style</name><price>37</price><image>img/camiseta29.png</image></product>
+        <product><name>Camiseta Urban Essentials</name><price>49</price><image>img/camiseta30.png</image></product>
+    </category>
+
+    <!-- ===== SUDADERAS (30) ===== -->
+    <category name="Sudaderas">
+        <product><name>Sudadera Clásica</name><price>75</price><image>img/sudadera1.png</image></product>
+        <product><name>Sudadera Básica Beige</name><price>75</price><image>img/sudadera2.png</image></product>
+        <product><name>Sudadera Básica Negra</name><price>75</price><image>img/sudadera3.png</image></product>
+        <product><name>Sudadera Básica Marrón</name><price>75</price><image>img/sudadera4.png</image></product>
+        <product><name>Sudadera Minimal</name><price>80</price><image>img/sudadera5.png</image></product>
+        <product><name>Sudadera Logo Bordado</name><price>85</price><image>img/sudadera6.png</image></product>
+        <product><name>Sudadera Street Style</name><price>90</price><image>img/sudadera7.png</image></product>
+        <product><name>Sudadera Oversize</name><price>95</price><image>img/sudadera8.png</image></product>
+        <product><name>Sudadera Urban Fit</name><price>100</price><image>img/sudadera9.png</image></product>
+        <product><name>Sudadera Premium</name><price>105</price><image>img/sudadera10.png</image></product>
+        <product><name>Sudadera Premium Heavy</name><price>110</price><image>img/sudadera11.png</image></product>
+        <product><name>Sudadera Premium Bordada</name><price>115</price><image>img/sudadera12.png</image></product>
+        <product><name>Sudadera Deluxe</name><price>120</price><image>img/sudadera13.png</image></product>
+        <product><name>Sudadera Limited</name><price>125</price><image>img/sudadera14.png</image></product>
+        <product><name>Sudadera Exclusive</name><price>130</price><image>img/sudadera15.png</image></product>
+
+        <!-- extras -->
+        <product><name>Sudadera Soft Touch</name><price>88</price><image>img/sudadera16.png</image></product>
+        <product><name>Sudadera Clean Style</name><price>92</price><image>img/sudadera17.png</image></product>
+        <product><name>Sudadera Mono Tone</name><price>97</price><image>img/sudadera18.png</image></product>
+        <product><name>Sudadera Earth Colors</name><price>102</price><image>img/sudadera19.png</image></product>
+        <product><name>Sudadera Street Icon</name><price>108</price><image>img/sudadera20.png</image></product>
+        <product><name>Sudadera Classic Fit</name><price>89</price><image>img/sudadera21.png</image></product>
+        <product><name>Sudadera Urban Essentials</name><price>112</price><image>img/sudadera22.png</image></product>
+        <product><name>Sudadera Vintage</name><price>118</price><image>img/sudadera23.png</image></product>
+        <product><name>Sudadera Core</name><price>99</price><image>img/sudadera24.png</image></product>
+        <product><name>Sudadera Daily</name><price>93</price><image>img/sudadera25.png</image></product>
+        <product><name>Sudadera Modern Fit</name><price>104</price><image>img/sudadera26.png</image></product>
+        <product><name>Sudadera Relax</name><price>96</price><image>img/sudadera27.png</image></product>
+        <product><name>Sudadera Tech</name><price>109</price><image>img/sudadera28.png</image></product>
+        <product><name>Sudadera Signature</name><price>122</price><image>img/sudadera29.png</image></product>
+        <product><name>Sudadera Premium Core</name><price>128</price><image>img/sudadera30.png</image></product>
+        <product><name>Sudadera Premium Plus</name><price>130</price><image>img/sudadera31.png</image></product>
+    </category>
+
+    <!-- ===== PANTALONES (30) ===== -->
+    <category name="Pantalones">
+        <product><name>Jogger Básico</name><price>90</price><image>img/pantalon1.png</image></product>
+        <product><name>Jogger Beige</name><price>90</price><image>img/pantalon2.png</image></product>
+        <product><name>Jogger Negro</name><price>90</price><image>img/pantalon3.png</image></product>
+        <product><name>Jogger Marrón</name><price>95</price><image>img/pantalon4.png</image></product>
+        <product><name>Cargo Urbano</name><price>100</price><image>img/pantalon5.png</image></product>
+        <product><name>Cargo Street</name><price>105</price><image>img/pantalon6.png</image></product>
+        <product><name>Denim Relaxed</name><price>110</price><image>img/pantalon7.png</image></product>
+        <product><name>Denim Fit</name><price>115</price><image>img/pantalon8.png</image></product>
+        <product><name>Pantalón Slim</name><price>120</price><image>img/pantalon9.png</image></product>
+        <product><name>Pantalón Regular</name><price>125</price><image>img/pantalon10.png</image></product>
+        <product><name>Pantalón Premium</name><price>130</price><image>img/pantalon11.png</image></product>
+        <product><name>Pantalón Deluxe</name><price>135</price><image>img/pantalon12.png</image></product>
+        <product><name>Pantalón Exclusive</name><price>140</price><image>img/pantalon13.png</image></product>
+        <product><name>Pantalón Signature</name><price>145</price><image>img/pantalon14.png</image></product>
+        <product><name>Pantalón Elite</name><price>150</price><image>img/pantalon15.png</image></product>
+
+        <!-- extras -->
+        <product><name>Pantalón Soft Fit</name><price>98</price><image>img/pantalon16.png</image></product>
+        <product><name>Pantalón Urban</name><price>108</price><image>img/pantalon17.png</image></product>
+        <product><name>Pantalón Street Icon</name><price>118</price><image>img/pantalon18.png</image></product>
+        <product><name>Pantalón Clean Style</name><price>128</price><image>img/pantalon19.png</image></product>
+        <product><name>Pantalón Mono Tone</name><price>138</price><image>img/pantalon20.png</image></product>
+        <product><name>Pantalón Earth Colors</name><price>148</price><image>img/pantalon21.png</image></product>
+        <product><name>Pantalón Classic</name><price>112</price><image>img/pantalon22.png</image></product>
+        <product><name>Pantalón Daily</name><price>102</price><image>img/pantalon23.png</image></product>
+        <product><name>Pantalón Modern</name><price>122</price><image>img/pantalon24.png</image></product>
+        <product><name>Pantalón Relax Fit</name><price>132</price><image>img/pantalon25.png</image></product>
+        <product><name>Pantalón Tech</name><price>142</price><image>img/pantalon26.png</image></product>
+        <product><name>Pantalón Core</name><price>99</price><image>img/pantalon27.png</image></product>
+        <product><name>Pantalón Essential</name><price>109</price><image>img/pantalon28.png</image></product>
+        <product><name>Pantalón Premium Core</name><price>139</price><image>img/pantalon29.png</image></product>
+        <product><name>Pantalón Urban Essentials</name><price>149</price><image>img/pantalon30.png</image></product>
+    </category>
 
 </products>

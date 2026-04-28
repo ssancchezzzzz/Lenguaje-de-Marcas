@@ -1,98 +1,119 @@
 :root {
---brown: #5a3e2b;
---beige: #f5f0e6;
---white: #ffffff;
+    --brown: #5a3e2b;
+    --brown-dark: #3d2a1d;
+    --beige: #f5f0e6;
+    --white: #ffffff;
 }
 
+/* RESET + BASE */
 body {
-margin: 0;
-font-family: 'Arial', sans-serif;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 body.dark {
-background: #1a1a1a;
-color: white;
+    background: #1a1a1a;
+    color: white;
 }
 
+/* HOME */
 .home-container {
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background: var(--beige);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--beige);
 }
 
 .logo {
-font-size: 3rem;
-color: var(--brown);
+    font-size: 3rem;
+    color: var(--brown);
 }
 
 .slogan {
-margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .btn-enter {
-padding: 10px 20px;
-background: var(--brown);
-color: white;
-text-decoration: none;
+    padding: 12px 25px;
+    background: var(--brown);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
+.btn-enter:hover {
+    background: var(--brown-dark);
+}
+
+/* HEADER */
 header {
-display: flex;
-justify-content: space-between;
-padding: 10px;
-background: var(--brown);
-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: var(--brown);
+    color: white;
 }
 
-.hero img, .hero video {
-width: 100%;
-max-height: 300px;
-object-fit: cover;
+/* HERO */
+.hero img,
+.hero video {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 
+/* PRODUCTOS */
 .products {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
-padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 .card {
-background: var(--white);
-padding: 10px;
-transition: 0.3s;
-cursor: pointer;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .card:hover {
-transform: translateY(-10px);
-box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
 }
 
+/* MODAL */
 .modal {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(0,0,0,0.7);
-display: flex;
-justify-content: center;
-align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidden {
-display: none;
+    display: none;
 }
 
 .modal-content {
-background: white;
-padding: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
+/* COLORES */
 .colors {
     display: flex;
     gap: 10px;
@@ -121,13 +142,14 @@ padding: 20px;
     margin-bottom: 10px;
 }
 
+/* MENÚ LATERAL */
 .side-menu {
     position: fixed;
     top: 0;
     left: -250px;
     width: 250px;
     height: 100%;
-    background: #5a3e2b;
+    background: var(--brown);
     padding-top: 60px;
     transition: 0.3s;
     z-index: 1000;
@@ -142,10 +164,11 @@ padding: 20px;
     color: white;
     padding: 15px;
     text-decoration: none;
+    transition: 0.2s;
 }
 
 .side-menu a:hover {
-    background: #3d2a1d;
+    background: var(--brown-dark);
 }
 
 .close-btn {
@@ -159,4 +182,47 @@ padding: 20px;
 .menu-icon {
     cursor: pointer;
     font-size: 25px;
+}
+
+/* ===== FOOTER MODERNO ===== */
+footer {
+    margin-top: auto;
+    background: var(--brown);
+    color: white;
+    padding: 40px 20px 20px;
+}
+
+/* Contenedor del footer */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+/* Columnas */
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 0.9rem;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+/* Línea inferior */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.8rem;
 }
